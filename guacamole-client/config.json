@@ -16,7 +16,7 @@
   "panel_icon": "mdi:remote-desktop",
   "ingress": true,
   "ingress_port": 8080,
-  "image": "thedtwo/guacamole-webserver",
+  "image": "thedtwo/guacamole-base",
   "options": {},
   "ports": {
     "8080/tcp": null
