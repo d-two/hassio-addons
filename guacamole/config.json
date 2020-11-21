@@ -1,6 +1,6 @@
 {
   "name": "Guacamole",
-  "version": "1.2.0",
+  "version": "latest",
   "slug": "haguacamole",
   "description": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH.",
   "arch": [
@@ -20,11 +20,11 @@
   "options": {},
   "ports": {
     "8080/tcp": null,
-	"5432/tcp": null
+    "5432/tcp": null
   },
   "ports_description": {
     "8080/tcp": "Web interface (Not required for Home Assistant Ingress)",
-	"5432/tcp": "postgresql"
+    "5432/tcp": "postgresql"
   },
   "schema": {
     "certfile": "str?",
