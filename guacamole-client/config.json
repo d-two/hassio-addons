@@ -24,6 +24,10 @@
   "ports_description": {
     "8080/tcp": "Web interface (Not required for Home Assistant Ingress)"
   },
+  "map": [
+    "ssl:ro",
+    "config:rw"
+  ],
   "schema": {
     "certfile": "str?",
     "keyfile": "str?",
