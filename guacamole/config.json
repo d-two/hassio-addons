@@ -20,11 +20,13 @@
   "options": {},
   "ports": {
     "8080/tcp": null,
-    "5432/tcp": null
+    "5432/tcp": null,
+    "4822/tcp": null
   },
   "ports_description": {
     "8080/tcp": "Web interface (Not required for Home Assistant Ingress)",
-    "5432/tcp": "postgresql"
+    "5432/tcp": "postgresql",
+    "4822/tcp": "guacamole-server"
   },
   "schema": {
     "certfile": "str?",
