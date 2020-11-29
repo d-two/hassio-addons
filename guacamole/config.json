@@ -28,6 +28,10 @@
     "5432/tcp": "postgresql",
     "4822/tcp": "guacamole-server"
   },
+  "map": [
+    "ssl:ro",
+    "config:rw"
+  ],
   "schema": {
     "certfile": "str?",
     "keyfile": "str?",
