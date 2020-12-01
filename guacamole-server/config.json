@@ -13,10 +13,10 @@
   "startup": "application",
   "boot": "auto",
   "panel_icon": "mdi:remote-desktop",
-  "image": "thedtwo/guacamole-server",
+  "image": "thedtwo/docker-multiarch-guacamole-server",
   "options": {},
   "ports": {
-    "4822/tcp": null
+    "4822/tcp": 4822
   },
   "ports_description": {
     "4822/tcp": "guacamole-server"
