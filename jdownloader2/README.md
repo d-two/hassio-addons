@@ -1,0 +1,1 @@
+JDownloader 2 for Home Assistant

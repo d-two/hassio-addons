@@ -1,0 +1,31 @@
+{
+  "name": "JDownloader 2",
+  "version": "latest",
+  "slug": "jdownloader2",
+  "description": "This image allows you to have JDownloader 2 easily installed and controlled via MyJDownloader, thanks to Docker. No cluncky and rusty VNC sessions here!",
+  "url": "https://jdownloader.org/jdownloader2",
+  "arch": ["armv7", "aarch64", "amd64", "armhf"],
+  "startup": "application",
+  "boot": "auto",
+  "image": "thedtwo/jd2-homeassistant",
+  "options": {
+    "email": "home@assistant.de",
+    "password": "fancy",
+	"device_name": "JD2 by HomeAssistant"
+  },
+  "schema": {
+    "email": "str",
+    "password": "str",
+    "device_name": "str"
+  },
+  "ports": {
+    "3129/tcp": 3129
+  },
+  "ports_description": {
+    "3129/tcp": "MyJDownloader port"
+  },
+  "map": [
+    "media:rw"
+  ],
+  "hassio_role": "default"
+}
