@@ -1,5 +1,5 @@
-# Home Assistant Add-ons: JDownloader 2
+# Home Assistant Add-on: JDownloader 2
 
 ## About
 
-JDownloader is a download manager, written in Java, which allows automatic download of groups of files from one-click hosting sites. JDownloader supports the use of premium accounts. Some parts, but not all, of JDownloader are open-source. 
+JDownloader is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day!
