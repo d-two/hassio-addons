@@ -4,7 +4,7 @@
   "slug": "jdownloader2",
   "description": "This image allows you to have JDownloader 2 easily installed and controlled via MyJDownloader, thanks to Docker. No cluncky and rusty VNC sessions here!",
   "url": "https://jdownloader.org/jdownloader2",
-  "arch": ["armv7", "aarch64", "amd64", "armhf"],
+  "arch": ["armv7", "aarch64", "amd64"],
   "startup": "application",
   "boot": "auto",
   "image": "thedtwo/jd2-homeassistant",
