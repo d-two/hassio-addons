@@ -2,7 +2,7 @@
   "name": "JDownloader 2",
   "version": "1.0",
   "slug": "jdownloader2",
-  "description": "This image allows you to have JDownloader 2 easily installed and controlled via MyJDownloader, thanks to Docker. No cluncky and rusty VNC sessions here!",
+  "description": "This add-on allows you to have JDownloader 2 easily installed and controlled via MyJDownloader.",
   "url": "https://jdownloader.org/jdownloader2",
   "arch": ["armv7", "aarch64", "amd64"],
   "startup": "application",
