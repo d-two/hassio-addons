@@ -1,0 +1,21 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: HPE SSA
+# Runs the SSA application
+# ==============================================================================
+
+bashio::log.info "Starting HPE SSA..."
+
+# Disable HA Authentication if front door is open
+if bashio::config.true 'leave_front_door_open'; then
+    export DISABLE_HA_AUTHENTICATION=true
+fi
+
+if bashio::config.has_value 'lang'; then
+	ssa -local -lang $(bashio::config 'lang')
+else
+	ssa -local
+fi
+
+bashio::log.info "HPE SSA closed..."
+kill -9 $(pidof nginx)
