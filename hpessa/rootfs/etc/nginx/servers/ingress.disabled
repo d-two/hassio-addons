@@ -9,6 +9,6 @@ server {
         deny    all;
 
         proxy_pass http://localhost:%%SSA_PORT%%/;
-		#proxy_pass http://backend%%ingress_entry%%/;
+        #proxy_pass http://backend%%ingress_entry%%/;
     }
 }
