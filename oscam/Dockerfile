@@ -91,7 +91,8 @@ RUN \
 COPY root/ /
 
 RUN \
-  chown root:root /etc/cont-init.d/30-config
+  chown root:root /etc/cont-init.d/30-config && \
+  chmod a+x /etc/cont-init.d/30-config
     
 # Ports and volumes
 EXPOSE 8888
