@@ -1,13 +1,10 @@
 #!/usr/bin/with-contenv bash
 
 # make folders
-mkdir -p \
-	/config/oscam
+mkdir -p /config/oscam
 
 # copy config
-#[[ ! -e /config/oscam/oscam.conf ]] && \
-#	cp /defaults/oscam.conf /config/oscam/oscam.conf
+#[[ ! -e /config/oscam/oscam.conf ]] && cp /defaults/oscam.conf /config/oscam/oscam.conf
 
 # permissions
-#chown -R abc:abc \
-#	/config
+#chown -R abc:abc /config
