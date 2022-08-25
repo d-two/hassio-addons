@@ -90,6 +90,9 @@ RUN \
 # copy local files
 COPY root/ /
 
+RUN \
+  chown root:root /etc/cont-init.d/30-config
+    
 # Ports and volumes
 EXPOSE 8888
 EXPOSE 9999
