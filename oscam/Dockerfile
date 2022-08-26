@@ -75,17 +75,17 @@ RUN \
   cd /tmp/omnikey && \
   ./install
 
-#RUN \
-#  echo "**** create abc user and make our folders ****" && \
-#  groupmod -g 1000 users && \
-#  useradd -u 911 -U -d /config -s /bin/false abc && \
-#  usermod -G users abc
+RUN \
+  echo "**** create abc user and make our folders ****" && \
+  groupmod -g 1000 users && \
+  useradd -u 911 -U -d /config -s /bin/false abc && \
+  usermod -G users abc
   
 RUN \
   echo "**** fix group for card readers and add abc to dialout group ****" && \
   groupmod -g 24 cron && \
-  groupmod -g 16 dialout
-  #usermod -a -G 16 abc
+  groupmod -g 16 dialout && \
+  usermod -a -G 16 abc
 
 RUN \
   echo "**** cleanup ****" && \
