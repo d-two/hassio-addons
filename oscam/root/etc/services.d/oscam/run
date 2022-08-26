@@ -1,4 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 exec \
-  s6-setuidgid abc /usr/bin/oscam -c /config/oscam
+  /usr/bin/oscam -c /config/oscam
+
+#exec \
+#  s6-setuidgid abc /usr/bin/oscam -c /config/oscam
