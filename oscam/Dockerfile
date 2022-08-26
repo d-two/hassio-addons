@@ -16,7 +16,7 @@ RUN \
     pcsc-lite-dev \
     subversion \
     tar \
-	shadow
+    shadow
 
 RUN \
   echo "**** install runtime packages ****" && \
@@ -48,7 +48,7 @@ RUN \
     LCDSUPPORT \
     LEDSUPPORT \
     READ_SDT_CHARSETS && \
-	make \
+  make \
     CONF_DIR=/config \
     DEFAULT_PCSC_FLAGS="-I/usr/include/PCSC" \
     NO_PLUS_TARGET=1 \
