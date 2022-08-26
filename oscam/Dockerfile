@@ -98,11 +98,8 @@ RUN \
 COPY root/ /
 
 RUN \
-  chown root:root /etc/cont-init.d/30-config && \
   chmod a+x /etc/cont-init.d/30-config && \
-  chown root:root /etc/services.d/pcscd/run && \
   chmod a+x /etc/services.d/pcscd/run && \
-  chown root:root /etc/services.d/oscam/run && \
   chmod a+x /etc/services.d/oscam/run
     
 # Ports and volumes
