@@ -8,6 +8,7 @@
   "boot": "auto",
   "init": false,
   "usb": true,
+  "full_access": true,
   "ports": {
     "8888/tcp": 8888,
     "9999/tcp": 9999
