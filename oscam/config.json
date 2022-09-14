@@ -1,21 +1,20 @@
 {
   "name": "OSCAM",
-  "version": "1.0",
+  "version": "1.1",
   "slug": "oscam",
   "description": "This add-on allows you to have a OSCAM-Server.",
   "arch": ["armv7", "aarch64", "amd64"],
   "startup": "application",
   "boot": "auto",
   "init": false,
-  "full_access": true,
-  "privileged": ["NET_ADMIN", "SYS_ADMIN", "SYS_RAWIO", "SYS_TIME", "SYS_NICE"],
+  "usb": true,
   "ports": {
     "8888/tcp": 8888,
-	"9999/tcp": 9999
+    "9999/tcp": 9999
   },
   "ports_description": {
     "8888/tcp": "Web Interface",
-	"9999/tcp": "OSCAM Server"
+    "9999/tcp": "OSCAM Server"
   },
   "map": [
     "config:rw"
