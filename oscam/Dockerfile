@@ -16,9 +16,7 @@ RUN \
     pcsc-lite-dev \
     subversion \
     tar \
-    shadow
-
-RUN \
+    shadow && \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
     ccid \
@@ -27,9 +25,7 @@ RUN \
     libssl1.1 \
     libusb \
     pcsc-lite \
-    pcsc-lite-libs
-
-RUN \
+    pcsc-lite-libs && \
   echo "**** compile oscam ****" && \
   if [ -z ${OSCAM_VERSION+x} ]; then \
     OSCAM_VERSION=$(svn info --show-item revision https://svn.streamboard.tv/oscam/trunk ); \
@@ -53,16 +49,12 @@ RUN \
     DEFAULT_PCSC_FLAGS="-I/usr/include/PCSC" \
     NO_PLUS_TARGET=1 \
     OSCAM_BIN=/usr/bin/oscam \
-    pcsc-libusb
-
-RUN \
+    pcsc-libusb && \
   echo "**** fix broken permissions from pcscd install ****" && \
   chown root:root \
     /usr/sbin/pcscd && \
   chmod 755 \
-    /usr/sbin/pcscd
-
-RUN \
+    /usr/sbin/pcscd && \
   echo "**** install PCSC drivers ****" && \
   mkdir -p \
     /tmp/omnikey && \
@@ -73,21 +65,15 @@ RUN \
   /tmp/omnikey.tar.gz -C \
     /tmp/omnikey --strip-components=2 && \
   cd /tmp/omnikey && \
-  ./install
-
-RUN \
+  ./install && \
   echo "**** create abc user and make our folders ****" && \
   groupmod -g 1000 users && \
   useradd -u 911 -U -d /config -s /bin/false abc && \
-  usermod -G users abc
-  
-RUN \
+  usermod -G users abc && \
   echo "**** fix group for card readers and add abc to dialout group ****" && \
   groupmod -g 24 cron && \
   groupmod -g 16 dialout && \
-  usermod -a -G 16 abc
-
-RUN \
+  usermod -a -G 16 abc && \
   echo "**** cleanup ****" && \
   apk del --purge \
     build-dependencies && \
