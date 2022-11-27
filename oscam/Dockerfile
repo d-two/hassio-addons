@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:12.2.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:12.2.7
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -51,8 +51,6 @@ RUN \
     OSCAM_BIN=/usr/bin/oscam \
     pcsc-libusb && \
   echo "**** fix broken permissions from pcscd install ****" && \
-  chown root:root \
-    /usr/sbin/pcscd && \
   chmod 755 \
     /usr/sbin/pcscd && \
   echo "**** install PCSC drivers ****" && \
@@ -60,7 +58,7 @@ RUN \
     /tmp/omnikey && \
   curl -o \
   /tmp/omnikey.tar.gz -L \
-    https://www.hidglobal.com/sites/default/files/drivers/ifdokccid_linux_x86_64-v4.2.8.tar.gz && \
+    "https://www3.hidglobal.com/sites/default/files/drivers/ifdokccid_linux_x86_64-v4.2.8.tar.gz" && \
   tar xzf \
   /tmp/omnikey.tar.gz -C \
     /tmp/omnikey --strip-components=2 && \
