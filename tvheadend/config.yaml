@@ -13,6 +13,7 @@ arch:
   - armv7
   - i386
 webui: "http://[HOST]:[PORT:9981]/"
+host_network: true
 hassio_role: admin
 hassio_api: true
 privileged:
@@ -25,11 +26,9 @@ devices:
 ports:
   9981/tcp: 9981
   9982/tcp: 9982
-  1024/udp: 1024
 ports_description:
   9981/tcp: TVH Web Interface
   9982/tcp: TVH HTSP
-  1024/udp: UDP Port
 map:
   - "config:rw"
 options:
