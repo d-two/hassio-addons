@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: TVHeadend
+# Starts TVHeadend
+# ==============================================================================
+
+declare satip_xml
+
+bashio::log.info "Starting TVHeadend..."
+if bashio::config.has_value 'satip_xml'; then
+    satip_xml="--satip_xml $(bashio::config 'satip_xml')"
+else
+    satip_xml=""
+fi
+exec /usr/bin/tvheadend -u root -g root -c /config/tvheadend $satip_xml
