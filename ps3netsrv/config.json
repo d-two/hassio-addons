@@ -1,0 +1,24 @@
+{
+    "name": "Ps3NetServer",
+    "slug": "ps3netserver",
+    "version": "0.0.1",
+    "description": "This is a Docker container for ps3netsrv (or ps3netsvr).",
+    "url": "https://github.com/d-two/docker-ps3netsrv",
+    "startup": "application",
+	"init": false,
+    "arch": [
+        "aarch64",
+        "amd64",
+        "armhf"
+    ],
+    "boot": "auto",
+    "map": [
+		"share:rw"
+    ],
+	"ports": {
+	  "38008/tcp": 38008
+    },
+    "ports_description": {
+	  "38008/tcp": "Network port"
+    }
+}
