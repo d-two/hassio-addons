@@ -17,4 +17,4 @@ User gid:    $(id -g ps3netsrv)
 -------------------------------------
 "
 
-mkdir -p /share/ps3netsrv
+mkdir -p /media/ps3netsrv
