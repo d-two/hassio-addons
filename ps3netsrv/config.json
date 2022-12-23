@@ -13,7 +13,7 @@
     ],
     "boot": "auto",
     "map": [
-		"share:rw"
+		"media:rw"
     ],
 	"ports": {
 	  "38008/tcp": 38008
