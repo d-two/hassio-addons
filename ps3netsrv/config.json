@@ -1,7 +1,7 @@
 {
     "name": "Ps3NetServer",
     "slug": "ps3netserver",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "This is a Docker container for ps3netsrv (or ps3netsvr).",
     "url": "https://github.com/d-two/docker-ps3netsrv",
     "startup": "application",
