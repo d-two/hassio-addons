@@ -6,4 +6,4 @@
 # ==============================================================================
 
 bashio::log.info "Starting Ps3NetSrv...."
-/usr/local/bin/ps3netsrv /share/ps3netsrv
+/usr/local/bin/ps3netsrv /media/ps3netsrv
