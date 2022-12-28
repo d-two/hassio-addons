@@ -3,7 +3,7 @@
     "slug": "ps3netserver",
     "version": "0.1.0",
     "description": "This is a Docker container for ps3netsrv (or ps3netsvr).",
-    "url": "https://github.com/d-two/docker-ps3netsrv",
+    "url": "https://github.com/d-two/hassio-addons/tree/main/ps3netsrv",
     "startup": "application",
 	"init": false,
     "arch": [
