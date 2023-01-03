@@ -31,6 +31,7 @@ ports_description:
   9982/tcp: TVH HTSP
 map:
   - "config:rw"
+  - "media:rw"
 options:
   system_packages: []
   init_commands: []
