@@ -1,6 +1,6 @@
 ---
 name: TVHeadend
-version: 1.5-1
+version: 1.5-2
 stage: experimental
 slug: tvheadend
 description: TV streaming server and recorder.
@@ -36,9 +36,15 @@ options:
   system_packages: []
   init_commands: []
   webgrabplus: false
+  picons: false
+  snp_url: ""
+  srp_url: ""
 schema:
   system_packages:
     - str
   init_commands:
     - str
   webgrabplus: bool
+  picons: bool
+  snp_url: str
+  srp_url: str
