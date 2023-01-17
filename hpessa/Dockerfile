@@ -21,7 +21,7 @@ RUN ( \
 
 RUN ( \
 	curl https://downloads.linux.hpe.com/SDR/hpePublicKey2048_key1.pub | apt-key add - && \
-        ( echo "deb http://downloads.linux.HPE.com/SDR/repo/mcp/ buster/current non-free" > /etc/apt/sources.list.d/proliant.sources.list ) && \
+        ( echo "deb http://downloads.linux.HPE.com/SDR/repo/mcp/ bullseye/current non-free" > /etc/apt/sources.list.d/proliant.sources.list ) && \
         apt-get update && \
         apt-get install -y ssa \
     )
