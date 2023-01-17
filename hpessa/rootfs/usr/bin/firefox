@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bashio
+declare ssa_port
+bashio::log.info "Starting fake firefox with '$@'..."
+
+ssa_port=${@}
+ssa_port=${ssa_port/http:\/\/127.0.0.1:/}
+ssa_port=${ssa_port/\/ssa.htm/}
+bashio::log.info "HPE SSA Port: ${ssa_port}"
+
+/nginx.sh ${ssa_port}
+
+bashio::log.info "Starting NGinx..."
+exec nginx
