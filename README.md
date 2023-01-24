@@ -17,3 +17,5 @@ JDownloader 2 is a free, open-source download management tool with a huge commun
 # OSCam
 Oscam is an Open Source Conditional Access Module software used for descrambling DVB transmissions using smart cards. It's both a server and a client.
 
+# ps3netsrv
+ps3netsrv is a server application used to stream content from a remote server to the PS3.
