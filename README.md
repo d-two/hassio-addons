@@ -10,3 +10,6 @@ Apache Guacamole is a clientless remote desktop gateway. It supports standard pr
 
 # HPE Smart Storage Administrator
 HPE Smart Storage Administrator (HPE SSA) offers a single interface that quickly sets up, configures and manages the HPE Smart Array controllers and the HPE SAS Host Bus Adapters (HBAs).
+
+# JDownloader 2
+JDownloader 2 is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day!
