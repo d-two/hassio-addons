@@ -1,0 +1,35 @@
+# This is a default site configuration.
+
+server {
+	listen 5800 ssl default_server;
+	listen [::]:5800 ssl default_server;
+	
+	include /etc/nginx/includes/ssl_params.conf;
+    include /etc/nginx/includes/server_params.conf;    
+    include /etc/nginx/includes/proxy_params.conf;
+
+    ssl on;
+    ssl_certificate /ssl/%%certfile%%;
+    ssl_certificate_key /ssl/%%keyfile%%;
+
+	# Redirect HTTP traffic.
+	# https://serverfault.com/a/664936
+	error_page 497 301 =307 https://$http_host$request_uri;
+
+	# https://github.com/novnc/noVNC/blob/master/docs/EMBEDDING.md#browser-cache-issue
+	add_header Cache-Control no-cache;
+
+	location /websockify {
+		websockify_pass unix:/tmp/vnc.sock;
+		websockify_read_timeout 5d;
+		websockify_send_timeout 5d;
+	}
+
+	# Access to favicons.
+	location ~* ^/(browserconfig.xml|site.webmanifest|safari-pinned-tab.svg|((favicon|apple-touch-icon|android-chrome|mstile)(.*)\.(ico|png)))$ {
+		root /opt/noVNC/app/images/icons;
+		# Uncomment if access to favicon.ico generates too many logs.
+		#log_not_found off;
+		#access_log off;
+	}
+}

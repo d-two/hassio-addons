@@ -1,0 +1,27 @@
+---
+name: MediaElch
+slug: mediaelch
+version: 2.10.0
+stage: experimental
+description: MediaElch is a MediaManager for Kodi. Information about Movies, TV Shows, Concerts and Music are stored as NFO files. Fanarts are downloaded automatically from fanart.tv.
+url: https://github.com/d-two/hassio-addons
+startup: application
+init: false
+panel_icon: mdi:multimedia
+ingress: true
+ingress_port: 5800
+webui: "http://[HOST]:[PORT:5800]"
+arch:
+- aarch64
+- amd64
+- armhf
+- i386
+boot: auto
+map:
+- media:rw
+schema:
+  app_lang: list(bg|cs-CZ|da|de|en|en-US|es-ES|et|fi|fr|it|ja|ko|nl-NL|no|pl|pt-BR|pt-PT|ru|sv|zh-CN)?
+#ports:
+#  5800/tcp: 5800
+#ports_description:
+#  5800/tcp: Web UI port

@@ -1,0 +1,4 @@
+#!/command/with-contenv bashio
+
+bashio::log.info "Starting Xvnc...." 
+exec /usr/bin/Xvnc -nolisten tcp -nolisten local -listen unix -geometry 1024x768 -depth 24 -rfbunixpath=/tmp/vnc.sock -SecurityTypes=None -desktop="MediaElch" :0

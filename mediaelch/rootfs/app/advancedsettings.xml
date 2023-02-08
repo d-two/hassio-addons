@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This XML contains advanced settings for MediaElch (http://mediaelch.de/).
+    All tags contain MediaElch's default values unless stated otherwise.
+-->
+<advancedsettings>
+    <!--
+        Set the interface language. If it is set to "system", your system's
+        language will be used. Use the format "lang-COUNTRY" to specify your
+        language. Examples: "de-DE", "en-US", "pt-PT", "pt-BR"
+        If <locale> is not valid, your system's locale will be used.
+        If <locale> exists, but is not supported by MediaElch, English will be used.
+    -->
+    <locale>%%app_lang%%</locale>
+</advancedsettings>

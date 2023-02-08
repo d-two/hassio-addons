@@ -1,0 +1,16 @@
+#!/command/with-contenv bashio
+
+export DISPLAY=":0"
+export XDG_DATA_HOME="/data/xdg/data"
+export XDG_CONFIG_HOME="/data/xdg/config"
+export XDG_CACHE_HOME="/data/xdg/cache"
+export XDG_STATE_HOME="/data/xdg/state"
+export XDG_RUNTIME_DIR="/data/runtime-root"
+export HOME="/data/home"
+
+mkdir -p ${XDG_DATA_HOME} ${XDG_CONFIG_HOME} ${XDG_CACHE_HOME} ${XDG_STATE_HOME} ${XDG_RUNTIME_DIR} ${HOME} 
+
+# Fix permissions 
+chmod 0700 ${XDG_RUNTIME_DIR}
+bashio::log.info "Starting OpenBox...."
+exec /usr/bin/openbox-session
