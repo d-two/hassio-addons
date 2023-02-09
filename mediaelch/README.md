@@ -1,3 +1,6 @@
+# Overview
+MediaElch is a MediaManager for Kodi. Information about Movies, TV Shows, Concerts and Music are stored as NFO files. Fanarts are downloaded automatically from fanart.tv.
+
 # List of available Languages
 
 | Code | language name | progress |
