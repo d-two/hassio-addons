@@ -16,6 +16,8 @@ COPY patches/ /tmp/patches/
 RUN \
  echo "**** install build packages ****" && \
  apk add --no-cache \
+ 	libcrypto1.1=1.1.1t-r1 \
+	libssl1.1=1.1.1t-r1 \
 	autoconf \
 	automake \
 	bsd-compat-headers \
