@@ -15,7 +15,7 @@ COPY patches/ /tmp/patches/
 
 RUN \
  echo "**** install build packages ****" && \
- apk add --no-cache \
+ apk add --no-cache -U \
 	libcrypto1.1=1.1.1t-r3 \
 	libssl1.1=1.1.1t-r3 \
 	autoconf \
