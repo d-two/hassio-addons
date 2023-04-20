@@ -13,12 +13,13 @@ ENV HOME="/config"
 # copy patches
 COPY patches/ /tmp/patches/
 
+RUN apk add --no-cache musl=1.2.2-r9
+
 RUN \
  echo "**** install build packages ****" && \
- apk upgrade --available && \
  apk add --no-cache \
-	libcrypto1.1=1.1.1t-r3 \
-	libssl1.1=1.1.1t-r3 \
+	libcrypto1.1 \
+	libssl1.1 \
 	autoconf \
 	automake \
 	bsd-compat-headers \
@@ -134,11 +135,11 @@ RUN \
 	ffmpeg-libs \
 	gnu-libiconv \
 	gzip \
-	libcrypto1.1=1.1.1t-r3 \
-	libssl1.1=1.1.1t-r3 \
+	libcrypto1.1 \
 	libcurl \
 	libdvbcsa \
 	libhdhomerun-libs \
+	libssl1.1 \
 	libva \
 	mesa-dri-ati \
 	libvpx \
