@@ -16,8 +16,8 @@ COPY patches/ /tmp/patches/
 RUN \
  echo "**** install build packages ****" && \
  apk add --no-cache \
-	libcrypto1.1 \
-	libssl1.1 \
+	libcrypto1.1=1.1.1t-r3 \
+	libssl1.1=1.1.1t-r3 \
 	autoconf \
 	automake \
 	bsd-compat-headers \
@@ -133,11 +133,11 @@ RUN \
 	ffmpeg-libs \
 	gnu-libiconv \
 	gzip \
-	libcrypto1.1 \
+	libcrypto1.1=1.1.1t-r3 \
+	libssl1.1=1.1.1t-r3 \
 	libcurl \
 	libdvbcsa \
 	libhdhomerun-libs \
-	libssl1.1 \
 	libva \
 	mesa-dri-ati \
 	libvpx \
