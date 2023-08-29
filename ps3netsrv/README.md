@@ -20,7 +20,7 @@ The architectures supported by this image are:
 
 ## Quick Start
 
-  - `media/ps3netsrv`: This location contains files from your host that need to be accessible by the application.
+  - coming soon
 
 ### Ports
 
