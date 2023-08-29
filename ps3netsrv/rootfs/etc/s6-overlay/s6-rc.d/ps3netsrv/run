@@ -1,9 +1,0 @@
-#!/command/with-contenv bashio
-# shellcheck shell=bash
-# ==============================================================================
-# Home Assistant Community Add-on: Ps3NetSrv
-# Runs the ps3netsrv
-# ==============================================================================
-
-bashio::log.info "Starting Ps3NetSrv...."
-/usr/local/bin/ps3netsrv /media/ps3netsrv
