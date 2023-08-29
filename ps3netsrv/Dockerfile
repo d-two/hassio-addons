@@ -65,6 +65,7 @@ RUN \
 COPY rootfs/ /
 
 # Corrects permissions for s6 v3
+RUN if [ -d /etc/cont-init.d ]; then chmod -R 755 /etc/cont-init.d; fi
 RUN if [ -d /etc/s6-overlay ]; then chmod -R 755 /etc/s6-overlay; fi
 
 # Build arguments
