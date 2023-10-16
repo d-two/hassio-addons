@@ -58,7 +58,7 @@ RUN \
     /tmp/omnikey && \
   curl -o \
   /tmp/omnikey.tar.gz -L \
-    "https://www3.hidglobal.com/sites/default/files/drivers/ifdokccid_linux_x86_64-v4.2.8.tar.gz" && \
+    "https://raw.githubusercontent.com/d-two/hassio-addons/main/oscam/ifdokccid_linux_x86_64-v4.2.8.tar.gz" && \
   tar xzf \
   /tmp/omnikey.tar.gz -C \
     /tmp/omnikey --strip-components=2 && \
