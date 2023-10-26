@@ -22,6 +22,6 @@ privileged:
 - DAC_READ_SEARCH
 schema:
   cifsdomain: str?
-  cifspassword: str?
-  cifsusername: str?
-  networkdisks: str?
+  cifspassword: str
+  cifsusername: str
+  networkdisks: str
