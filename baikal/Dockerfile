@@ -11,20 +11,20 @@ ENV VERSION 0.9.5
 # hadolint ignore=DL3003
 RUN \
     apk add --no-cache \
-        nginx=1.22.1-r0 \
-        php8-curl=8.0.26-r0 \
-        php8-fpm=8.0.26-r0 \
-        php8-mbstring=8.0.26-r0 \
-        php8-xml=8.0.26-r0 \
-        php8=8.0.26-r0 \
-		php8-sqlite3=8.0.26-r0 \
-		php8-pdo=8.0.26-r0 \
-		php8-pdo_mysql=8.0.26-r0 \
-		php8-pdo_sqlite=8.0.26-r0 \
-		php8-session=8.0.26-r0 \
-		php8-dom=8.0.26-r0 \
-		php8-xmlreader=8.0.26-r0 \
-		php8-xmlwriter=8.0.26-r0 \
+        nginx \
+        php8-curl \
+        php8-fpm \
+        php8-mbstring \
+        php8-xml \
+        php8 \
+	php8-sqlite3 \
+	php8-pdo \
+	php8-pdo_mysql \
+	php8-pdo_sqlite \
+	php8-session \
+	php8-dom \
+	php8-xmlreader \
+	php8-xmlwriter \
     \
     && curl -Ls "https://github.com/sabre-io/Baikal/releases/download/$VERSION/baikal-$VERSION.zip" -o baikal-$VERSION.zip \
         && unzip -q baikal-$VERSION.zip -d /var/www/ \
