@@ -21,8 +21,8 @@ RUN \
   apk add --no-cache \
     ccid \
     curl \
-    libcrypto1.1 \
-    libssl1.1 \
+    libcrypto3 \
+    libssl3 \
     libusb \
     pcsc-lite \
     pcsc-lite-libs && \
