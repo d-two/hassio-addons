@@ -7,22 +7,18 @@ ARG OSCAM_VERSION
 RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache --virtual=build-dependencies \
-    gcc \
-    g++ \
+    build-base \
     libdvbcsa-dev \
     libusb-dev \
     linux-headers \
-    make \
     openssl-dev \
-    pcsc-lite-dev \
-    tar \
+    pcsc-lite-dev && \
     shadow && \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
     ccid \
     curl \
-    libcrypto3 \
-    libssl3 \
+    openssl \
     libusb \
     pcsc-lite \
     pcsc-lite-libs && \
