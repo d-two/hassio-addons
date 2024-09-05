@@ -12,7 +12,7 @@ RUN \
     libusb-dev \
     linux-headers \
     openssl-dev \
-    pcsc-lite-dev && \
+    pcsc-lite-dev \
     shadow && \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
