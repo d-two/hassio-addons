@@ -1,6 +1,6 @@
 {
   "name": "OSCAM",
-  "version": "1.0",
+  "version": "1.0-dev",
   "slug": "oscam",
   "description": "This add-on allows you to have a OSCAM-Server.",
   "arch": ["armv7", "aarch64", "amd64"],
