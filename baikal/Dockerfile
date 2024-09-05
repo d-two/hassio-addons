@@ -12,19 +12,19 @@ ENV VERSION 0.9.5
 RUN \
     apk add --no-cache \
         nginx \
-        php8-curl \
-        php8-fpm \
-        php8-mbstring \
-        php8-xml \
-        php8 \
-	php8-sqlite3 \
-	php8-pdo \
-	php8-pdo_mysql \
-	php8-pdo_sqlite \
-	php8-session \
-	php8-dom \
-	php8-xmlreader \
-	php8-xmlwriter \
+        php81-curl \
+        php81-fpm \
+        php81-mbstring \
+        php81-xml \
+        php81 \
+	php81-sqlite3 \
+	php81-pdo \
+	php81-pdo_mysql \
+	php81-pdo_sqlite \
+	php81-session \
+	php81-dom \
+	php81-xmlreader \
+	php81-xmlwriter \
     \
     && curl -Ls "https://github.com/sabre-io/Baikal/releases/download/$VERSION/baikal-$VERSION.zip" -o baikal-$VERSION.zip \
         && unzip -q baikal-$VERSION.zip -d /var/www/ \
