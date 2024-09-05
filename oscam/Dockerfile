@@ -9,12 +9,12 @@ RUN \
   apk add --no-cache --virtual=build-dependencies \
     gcc \
     g++ \
+    libdvbcsa-dev \
     libusb-dev \
     linux-headers \
     make \
     openssl-dev \
     pcsc-lite-dev \
-    subversion \
     tar \
     shadow && \
   echo "**** install runtime packages ****" && \
