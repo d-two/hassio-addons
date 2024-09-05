@@ -5,7 +5,7 @@
   "description": "This add-on allows you to have a OSCAM-Server.",
   "arch": ["armv7", "aarch64", "amd64"],
   "startup": "application",
-  "webui:": "[PROTO:ssl]://[HOST]:[PORT:8888]",
+  "webui": "[PROTO:ssl]://[HOST]:[PORT:8888]",
   "boot": "auto",
   "init": false,
   "uart": true,
