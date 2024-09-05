@@ -1,7 +1,7 @@
 ---
 name: Baikal
 slug: baikal
-version: 0.9.5-fix
+version: 0.9.5
 description: Baikal is a Cal and CardDAV server, based on sabre/dav, that includes an administrative interface for easy management.
 url: https://github.com/d-two/hassio-addons
 startup: application
