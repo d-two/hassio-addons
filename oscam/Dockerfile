@@ -17,7 +17,7 @@ RUN \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
     ccid \
-    curl \
+    libdvbcsa \
     openssl \
     libusb \
     pcsc-lite \
