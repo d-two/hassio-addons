@@ -20,7 +20,10 @@ The architectures supported by this image are:
 
 ## Quick Start
 
-  - coming soon
+  cifsdomain: workgroup (optional)
+  cifspassword: password
+  cifsusername: username
+  networkdisks: //192.168.137.100/path/to/games
 
 ### Ports
 
