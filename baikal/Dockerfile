@@ -5,7 +5,7 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-ENV VERSION 0.9.5
+ENV VERSION 0.10.1
 
 # Setup base
 # hadolint ignore=DL3003
