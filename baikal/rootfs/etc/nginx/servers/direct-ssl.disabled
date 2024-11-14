@@ -21,12 +21,13 @@ server {
 
   # Pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
   location ~ ^(.+\.php)(.*)$ {
-    try_files $fastcgi_script_name =404;
-    include        /etc/nginx/includes/fastcgi_params.conf;
+    fastcgi_pass 127.0.0.1:9001;	
+    try_files $fastcgi_script_name =404;    
     fastcgi_split_path_info  ^(.+\.php)(.*)$;
-    fastcgi_pass   127.0.0.1:9001;
+	fastcgi_index index.php;
     fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
     fastcgi_param  PATH_INFO        $fastcgi_path_info;
+	include /etc/nginx/includes/fastcgi_params.conf;
   }
 
   # Deny access to Apache httpd .htaccess files, see https://github.com/JsBergbau/BaikalAnleitung#webserver-konfiguration
