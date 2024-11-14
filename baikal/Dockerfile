@@ -36,6 +36,7 @@ RUN \
 
 # Copy root filesystem
 COPY rootfs /
+COPY --chown=nginx:nginx Plugin.php /var/www/baikal/vendor/sabre/dav/lib/CalDAV/Plugin.php
 
 # Corrects permissions for s6 v3
 RUN if [ -d /etc/cont-init.d ]; then chmod -R 755 /etc/cont-init.d; fi && \
