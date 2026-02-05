@@ -13,10 +13,7 @@ The architectures supported by this image are:
 | Architecture | Status |
 | :----: | ------ |
 | x86-64 | working |
-| x86 | untested |
 | arm64 | working |
-| armv7 |  untested |
-| armhf | untested |
 
 ## Quick Start
 
