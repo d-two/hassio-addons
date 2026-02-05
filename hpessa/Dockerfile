@@ -19,12 +19,8 @@ RUN ( \
     && luarocks install lua-resty-http \
     )
 
-RUN ( \
-	curl https://downloads.linux.hpe.com/SDR/hpePublicKey2048_key1.pub | apt-key add - && \
-        ( echo "deb http://downloads.linux.HPE.com/SDR/repo/mcp/ bullseye/current non-free" > /etc/apt/sources.list.d/proliant.sources.list ) && \
-        apt-get update && \
-        apt-get install -y ssa \
-    )
+COPY ssa-5.30-6.0_amd64.deb /ssa_amd64.deb
+RUN apt-get install -y /ssa_amd64.deb
 
 COPY rootfs /
 # Corrects permissions
