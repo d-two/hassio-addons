@@ -1,0 +1,22 @@
+name: OSCAM
+version: 1.1
+slug: oscam
+description: This add-on allows you to have a OSCAM-Server.
+arch:
+  - armv7
+  - aarch64
+  - amd64
+startup: application
+webui: 'http://[HOST]:[PORT:8888]'
+boot: auto
+init: false
+uart: true
+ports:
+  8888/tcp: 8888
+  9999/tcp: 9999
+ports_description:
+  8888/tcp: Web Interface
+  9999/tcp: OSCAM Server
+map:
+  - 'config:rw'
+hassio_role: default
